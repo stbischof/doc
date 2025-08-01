@@ -5,7 +5,8 @@ group: Class
 
 # MemberProperty<a name="class-memberproperty"></a>
 
-Defines an additional attribute that can be associated with dimension members to provide supplementary information beyond the basic member identification, naming, and captioning. Member properties enable rich analytical capabilities by exposing detailed member characteristics such as demographic data, geographic coordinates, financial metrics, temporal attributes, or any domain-specific descriptive information. These properties are fully integrated into the OLAP infrastructure, appearing in MDX query results, client tool member browsers, and XMLA metadata discovery. Properties support various data types including strings, numbers, dates, and booleans, with optional custom formatters for specialized display logic. The dependsOnLevelValue flag enables query optimization by indicating functional dependencies, allowing the OLAP engine to exclude properties from GROUP BY clauses when they are determined by the level member key. Properties can be used in calculated members, conditional expressions, filtering operations, and advanced analytical scenarios like property-based aggregations and drill-through operations.
+Defines an additional attribute that can be associated with dimension members to provide supplementary information beyond the basic member identification, naming, and captioning. Member properties enable rich analytical capabilities by exposing detailed member characteristics such as demographic data, geographic coordinates, financial metrics, temporal attributes, or any domain-specific descriptive information. These properties are fully integrated into the OLAP infrastructure, appearing in MDX query results, client tool member browsers, and XMLA metadata discovery.
+
 ## Extends
 - AbstractElement [🔗](./class-AbstractElement)
 ## Attributes
