@@ -5,7 +5,8 @@ group: Class
 
 # AggregationExclude<a name="class-aggregationexclude"></a>
 
-Defines exclusion rules that prevent specific tables from being used as aggregation tables, even if they would otherwise match aggregation patterns or be considered suitable for aggregation optimization. AggregationExclude is essential for maintaining aggregation accuracy and system reliability by providing explicit control over which tables should be avoided during aggregation table discovery and selection. This mechanism handles various scenarios including tables with data quality issues, incomplete aggregations that could produce incorrect results, tables under maintenance or reconstruction, temporary tables that might match naming patterns, and special-purpose tables that follow similar naming conventions but are not intended for OLAP aggregation use. Exclusion rules support both exact name matching for specific table exclusions and pattern-based matching for excluding categories of tables, with configurable case sensitivity to accommodate different database and naming convention requirements.
+Defines exclusion rules that prevent specific tables from being used as aggregation tables, even if they would otherwise match aggregation patterns or be considered suitable for aggregation optimization. AggregationExclude is essential for maintaining aggregation accuracy and system reliability by providing explicit control over which tables should be avoided during aggregation table discovery and selection.
+
 ## Extends
 
 ## Attributes
