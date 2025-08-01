@@ -29,7 +29,7 @@ The fundamental base class for all named elements in the ROLAP mapping model. Th
       <td>1</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Unique identifier for this element within the scope of its containing model. This ID serves as the primary key for object references, cross-references between elements, and internal system operations. The ID must be unique within the catalog and should follow consistent naming conventions (e.g., '_cube_sales', '_dim_product'). This identifier is used by the OLAP engine for object lookup, caching keys, and maintaining referential integrity during schema transformations.</em></td>
+      <td colspan="5"><em>Unique identifier for this element within the scope of its containing model. This ID serves as the primary key for object references, cross-references between elements, and internal system operations. The ID must be unique and eigther should follow consistent naming conventions (e.g., '_cube_sales', '_dim_product'),or may uses UUIDs. This identifier is used by the OLAP engine for object lookup, caching keys, and maintaining referential integrity during schema transformations.</em></td>
     </tr>
     <tr>
       <td><strong>description</strong></td>
