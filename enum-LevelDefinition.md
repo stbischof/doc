@@ -1,0 +1,46 @@
+---
+title: LevelDefinition
+group: Enum
+---
+
+# LevelDefinition<a name="enum-leveldefinition"></a>
+
+Enumeration that defines semantic level types for dimensional hierarchy levels, providing business meaning and context that enables specialized analytical behavior, client tool integration, and intelligent query processing based on the conceptual role that each level plays within the business domain. LevelDefinition addresses the need for OLAP systems to understand not just the structural relationships between hierarchy levels, but also their semantic meaning in business terms, enabling sophisticated analytical capabilities including time intelligence calculations, geographic analysis, organizational reporting, and domain-specific business logic that can adapt behavior based on level semantics. This semantic typing is essential for advanced OLAP applications that need to provide intelligent analytical features including automatic time-based calculations for temporal levels, geographic mapping and spatial analysis for location-based levels, organizational hierarchy navigation for business structure levels, and specialized formatting and presentation logic that reflects the business meaning of different level types. The level definition enumeration supports rich analytical scenarios including time intelligence where temporal levels enable period-over-period comparisons and time-based aggregations, geographic intelligence where location levels can integrate with mapping and spatial analysis tools, organizational intelligence where business hierarchy levels support organizational reporting and analysis patterns, and domain-specific intelligence where industry-specific level types can enable specialized analytical capabilities that reflect unique business requirements and analytical patterns.
+- **REGULAR** (0)
+- **TIME_YEARS** (1)
+- **TIME_HALF_YEARS** (2)
+- **TIME_QUARTERS** (3)
+- **TIME_MONTHS** (4)
+- **TIME_WEEKS** (5)
+- **TIME_DAYS** (6)
+- **TIME_HOURS** (7)
+- **TIME_MINUTES** (8)
+- **TIME_SECONDS** (9)
+- **TIME_UNDEFINED** (10)
+- **NULL** (11)
+- **GEO_CONTINENT** (12)
+- **GEO_REGION** (13)
+- **GEO_COUNTRY** (14)
+- **GEO_STATE_OR_PROVINCE** (15)
+- **GEO_COUNTY** (16)
+- **GEO_CITY** (17)
+- **GEO_POSTALCODE** (18)
+- **GEO_POINT** (18)
+- **ORG_UNIT** (19)
+- **BOM_RESOURCE** (20)
+- **QUANTITATIVE** (21)
+- **ACCOUNT** (22)
+- **CUSTOMER** (23)
+- **CUSTOMER_GROUP** (24)
+- **CUSTOMER_HOUSEHOLD** (25)
+- **PRODUCT** (26)
+- **PRODUCT_GROUP** (27)
+- **SCENARIO** (28)
+- **UTILITY** (29)
+- **PERSON** (30)
+- **COMPANY** (21)
+- **CURRENCY_SOURCE** (32)
+- **CURRENCY_DESTINATION** (33)
+- **CHANNEL** (34)
+- **REPRESENTATIVE** (35)
+- **PROMOTION** (36)
