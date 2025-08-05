@@ -40,7 +40,7 @@ Abstract foundational class for all dimensional structures in OLAP modeling, rep
       <td>1</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Boolean flag controlling whether this dimension appears in client tool dimension lists, XMLA metadata discovery, and cube browsers. When set to false, the dimension becomes hidden from normal user interfaces but remains accessible through direct references in MDX queries. This is useful for creating internal system dimensions, intermediate calculation dimensions, or advanced dimensions intended only for power users who know the dimension names explicitly.</em></td>
+      <td colspan="5"><em>Boolean flag controlling whether this dimension appears in client tool dimension lists, XMLA metadata discovery, and cube browsers. When set to false, the dimension becomes hidden from normal user interfaces but remains fully accessible through direct references in MDX queries. This is useful for creating internal system dimensions, intermediate calculation dimensions, or advanced dimensions intended only for power users who know the dimension names explicitly.</em></td>
     </tr>
   </tbody>
 </table>
