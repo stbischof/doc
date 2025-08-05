@@ -68,16 +68,6 @@ The root container of an OLAP schema that defines a complete analytical database
       <td colspan="5"><em>Collection of cubes (both physical and virtual) that define the analytical content available in this catalog. Each cube represents a specific analytical perspective on the business data, containing measures for analysis and dimensions for slicing and dicing. Physical cubes map directly to fact tables and provide the foundation for analysis, while virtual cubes combine multiple physical cubes to create unified analytical views. While not strictly required, at least one cube is typically defined to provide analytical functionality.</em></td>
     </tr>
     <tr>
-      <td><strong>namedSets</strong></td>
-      <td>NamedSet<a href="./class-NamedSet">🔗</a></td>
-      <td>0</td>
-      <td>&infin;</td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td colspan="5"><em>Collection of global named sets that define reusable member collections available across all cubes in the catalog. Named sets provide a way to define commonly used member groupings (like 'Top 10 Products', 'Current Quarter', or 'Key Customers') that can be referenced in MDX queries, calculated members, and reporting applications. These catalog-level named sets are shared across all cubes and provide consistency for common analytical concepts.</em></td>
-    </tr>
-    <tr>
       <td><strong>accessRoles</strong></td>
       <td>AccessRole<a href="./class-AccessRole">🔗</a></td>
       <td>0</td>
@@ -95,7 +85,7 @@ The root container of an OLAP schema that defines a complete analytical database
       <td>false</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Reference to the access role that should be applied by default when users connect without explicit role assignment. This provides a baseline security policy for the schema, typically configured to allow basic read access to public data while restricting sensitive information. If not specified, Mondrian does not assign a built-in default role, and access will be denied unless a role is explicitly provided. This setting is particularly useful for public reporting scenarios, shared dashboards, or development environments where default read access is desirable.</em></td>
+      <td colspan="5"><em>Reference to the access role that should be applied by default when users connect without explicit role assignment. This provides a baseline security policy for the schema, typically configured to allow basic read access to public data while restricting sensitive information. If not specified, Daanse does not assign a built-in default role, and access will be denied unless a role is explicitly provided. This setting is particularly useful for public reporting scenarios, shared dashboards, or development environments where default read access is desirable.</em></td>
     </tr>
     <tr>
       <td><strong>dbschemas</strong></td>
@@ -126,7 +116,6 @@ classDiagram
   AbstractElement <|-- Catalog
   Catalog --> Parameter : parameters
   Catalog --> Cube : cubes
-  Catalog --> NamedSet : namedSets
   Catalog --> AccessRole : accessRoles
   Catalog --> AccessRole : defaultAccessRole
   Catalog --> DatabaseSchema : dbschemas
