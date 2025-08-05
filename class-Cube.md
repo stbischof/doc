@@ -65,7 +65,7 @@ Abstract base class for all cube types in the OLAP model. A cube represents a mu
       <td>true</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Collection of calculated members defined at the cube level. Calculated members are virtual members that are computed using MDX expressions rather than being stored in the database. They can represent complex business calculations (like profit margins, growth rates, or variance analysis), derived measures, or custom dimension members. Cube-level calculated members are available in all queries against this cube and provide a way to extend the analytical model without modifying the underlying data structures.</em></td>
+      <td colspan="5"><em>Collection of calculated members defined at the cube level. Calculated members are virtual members that are computed using MDX expressions rather than being stored in the database. They can represent complex business calculations (like profit margins, growth rates, or variance analysis), derived measures, or custom dimension members. Each calculated member must belong to a specific dimension — most commonly the Measures dimension for calculated measures. Cube-level calculated members are available in all queries against this cube and provide a way to extend the analytical model without modifying the underlying data structures.</em></td>
     </tr>
     <tr>
       <td><strong>namedSets</strong></td>
@@ -75,7 +75,7 @@ Abstract base class for all cube types in the OLAP model. A cube represents a mu
       <td>true</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Collection of named sets specific to this cube. Named sets define reusable collections of members that are commonly used in analysis and reporting. Cube-specific named sets might include concepts like 'Top Products for this Sales Territory', 'Budget Items', or 'Key Performance Indicators' that are only meaningful in the context of this particular cube. These named sets complement the catalog-level named sets and provide cube-specific analytical shortcuts.</em></td>
+      <td colspan="5"><em>Collection of named sets specific to this cube. Named sets define reusable collections of members that are commonly used in analysis and reporting. Cube-specific named sets might include concepts like 'Top Products for this Sales Territory', 'Budget Items', or 'Key Performance Indicators' that are only meaningful in the context of this particular cube. These named sets provide cube-specific analytical shortcuts and are not shared across cubes.</em></td>
     </tr>
     <tr>
       <td><strong>kpis</strong></td>
@@ -85,7 +85,7 @@ Abstract base class for all cube types in the OLAP model. A cube represents a mu
       <td>true</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Collection of Key Performance Indicators (KPIs) defined for this cube. KPIs are business metrics that measure progress toward specific business objectives and typically include target values, status indicators, and trend information. They provide a structured way to define and track important business measurements like sales targets, quality metrics, or operational efficiency indicators. KPIs often include visual elements like traffic light indicators and are commonly used in executive dashboards and scorecards.</em></td>
+      <td colspan="5"><em>Collection of Key Performance Indicators (KPIs) defined for this cube. KPIs are business metrics that measure progress toward specific business objectives and typically include target values, status indicators, and trend information. They provide a structured way to define and track important business measurements like sales targets, quality metrics, or operational efficiency indicators. KPIs often include visual elements like traffic light indicators and are commonly used in executive dashboards and scorecards. KPIs are defined using the <Kpi> element and are primarily exposed via XMLA; they do not directly affect MDX query results and may not be supported by all client tools.</em></td>
     </tr>
     <tr>
       <td><strong>defaultMeasure</strong></td>
@@ -95,7 +95,9 @@ Abstract base class for all cube types in the OLAP model. A cube represents a mu
       <td>false</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Reference to the measure that should be used as the default when queries don't explicitly specify a measure. This provides a sensible default for client tools and ad-hoc queries, typically pointing to the most commonly used or most important measure in the cube (like 'Sales Amount' or 'Quantity'). When users drag dimensions into a pivot table or create a new query, this measure is automatically included to provide immediate meaningful results.</em></td>
+      <td colspan="5"><em>Reference to the measure that should be used as the default when queries don't explicitly specify a measure. This provides a sensible default for client tools and ad-hoc queries, typically pointing to the most commonly used or most important measure in the cube (like 'Sales Amount' or 'Quantity'). When users drag dimensions into a pivot table or create a new query, this measure is automatically included to provide immediate meaningful results. defaultMeasure sets the default member of the [Measures] dimension and is used in contexts where no measure is explicitly specified in the MDX query.
+
+</em></td>
     </tr>
   </tbody>
 </table>
