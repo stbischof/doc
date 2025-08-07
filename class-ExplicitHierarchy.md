@@ -62,7 +62,8 @@ classDiagram
   class ExplicitHierarchy {
   }
 
-  AbstractElement <|-- ExplicitHierarchy  Hierarchy <|-- ExplicitHierarchy
+  AbstractElement <|-- ExplicitHierarchy  
+  Hierarchy <|-- ExplicitHierarchy
   ExplicitHierarchy --> Level : levels
 
 ```
