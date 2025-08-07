@@ -115,7 +115,8 @@ classDiagram
     + parentAsLeafNameFormat : EString
   }
 
-  AbstractElement <|-- ParentChildHierarchy  Hierarchy <|-- ParentChildHierarchy
+  AbstractElement <|-- ParentChildHierarchy
+  Hierarchy <|-- ParentChildHierarchy
   ParentChildHierarchy --> ParentChildLink : parentChildLink
   ParentChildHierarchy --> Column : parentColumn
   ParentChildHierarchy --> Level : level
