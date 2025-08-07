@@ -95,7 +95,7 @@ A concrete cube implementation that maps directly to one or more fact tables in 
       <td>true</td>
     </tr>
     <tr>
-      <td colspan="5"><em>Collection of measure groups that organize the measures (metrics) available in this cube. Each MeasureGroup represents a logical grouping of related measures that share common properties like data source, aggregation behavior, or business domain. For example, a sales cube might have separate measure groups for 'Sales Metrics' (revenue, quantity) and 'Cost Metrics' (cost of goods, expenses). At least one measure group is required as every physical cube must provide measures for analysis.</em></td>
+      <td colspan="5"><em>Collection of measure groups that organize the measures (metrics) available in this cube. Each MeasureGroup represents a logical grouping of related measures that share common properties like data source, aggregation behavior, or business domain. A measure group is typically bound to a single underlying fact table, ensuring all its measures share the same dimensionality and granularity. For example, a sales cube might have separate measure groups for 'Sales Metrics' (revenue, quantity) and 'Cost Metrics' (cost of goods, expenses), each potentially linked to different fact tables (e.g., fact_sales and fact_costs respectively). At least one measure group is required as every physical cube must provide measures for analysis.</em></td>
     </tr>
   </tbody>
 </table>
