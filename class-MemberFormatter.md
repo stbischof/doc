@@ -54,6 +54,7 @@ classDiagram
   class MemberFormatter {
   }
 
-  Formatter <|-- MemberFormatter  IMemberFormatter <|-- MemberFormatter
+  Formatter <|-- MemberFormatter  
+  IMemberFormatter <|-- MemberFormatter
 
 ```
