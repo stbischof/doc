@@ -80,12 +80,12 @@ Connects a cube to a dimension, establishing the relationship between fact table
     <tr>
       <td><strong>foreignKey</strong></td>
       <td>Column<a href="./class-Column">🔗</a></td>
-      <td>1</td>
+      <td>0</td>
       <td>1</td>
       <td>false</td>
     </tr>
     <tr>
-      <td colspan="5"><em>The foreign key column in the fact table that references the primary key of the dimension table, establishing the relational link between fact data and dimensional context for OLAP analysis.</em></td>
+      <td colspan="5"><em>Optional reference to  to foreign key column in the fact table that references the primary key of the dimension table, establishing the relational link between fact data and dimensional context for OLAP analysis.</em></td>
     </tr>
     <tr>
       <td><strong>dimension</strong></td>
